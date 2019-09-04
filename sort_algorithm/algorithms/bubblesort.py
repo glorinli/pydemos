@@ -10,9 +10,7 @@ class BubbleSortAlgorithm(abs_sort_algorithm.AbsSortAlgorithm):
             print("Checking ", i)
             for j in range(0, i):
                 if (list[j] > list[j + 1]):
-                    temp = list[j]
-                    list[j] = list[j + 1]
-                    list[j + 1] = temp
+                    list[j], list[j + 1] = list[j + 1], list[j]
                     print("swap ", list[j], "and", list[j + 1])
 
         return list
